@@ -4,9 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema Cuentas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1>This is from base</h1>
+    {% load heroicons %}
+    <nav class="text-blue-700">
+      <a href="{% url 'cuentas:index' %}">Inicio</a
+      ><a href="{% url 'cuentas:incomes' %}">Entradas</a>
+    </nav>
     {%block content%} {%endblock%}
   </body>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+    }
+  </style>
 </html>

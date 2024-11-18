@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "heroicons",
     "cuentas.apps.CuentasConfig",
     "django.contrib.admin",
     "django.contrib.auth",
