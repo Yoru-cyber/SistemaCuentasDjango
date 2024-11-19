@@ -1,10 +1,12 @@
 from datetime import datetime
+from openpyxl import Workbook
+from openpyxl.utils import get_column_letter
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Sum
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
@@ -236,3 +238,73 @@ def totals_by_month_year(request):
         return HttpResponse(
             "Invalid year or month", status=400, content_type="text/plain"
         )
+
+
+def export_incomes_expenses_to_excel(request):
+    """
+    Generates an Excel file with all incomes and expenses, including totals and a type column with formulas.
+    """
+    # Create an Excel workbook and sheet
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "Ingresos y Gastos"
+
+    # Add headers to the sheet
+    headers = ["Tipo", "Nombre", "Categoría", "Valor", "Fecha", "Total de Ingresos", "Total de Gastos", "Total General"]
+    sheet.append(headers)
+
+    # Query all incomes and expenses
+    incomes = Income.objects.all()
+    expenses = Expense.objects.all()
+
+    # Populate rows for incomes
+    row_idx = 2  # Start from the second row since the first row is headers
+    for income in incomes:
+        sheet.append([
+            "Ingreso",  # Tipo
+            income.name,
+            income.category,
+            float(income.value),
+            income.date.strftime('%Y-%m-%d'),
+            "",  # Placeholder for Total de Ingresos
+            "",  # Placeholder for Total de Gastos
+            "",  # Placeholder for Total General
+        ])
+        row_idx += 1
+
+    # Populate rows for expenses
+    for expense in expenses:
+        sheet.append([
+            "Gasto",  # Tipo
+            expense.name,
+            expense.category,
+            float(expense.value),
+            expense.date.strftime('%Y-%m-%d'),
+            "",  # Placeholder for Total de Ingresos
+            "",  # Placeholder for Total de Gastos
+            "",  # Placeholder for Total General
+        ])
+        row_idx += 1
+
+    # Add totals row with formulas
+    total_row_idx = row_idx + 1  # The next row after the last data row
+    value_col_letter = get_column_letter(4)  # Column D for "Valor"
+    sheet.append([
+        "",  # Empty column for Tipo
+        "Totales",  # Label
+        "",  # Empty column for Categoría
+        "",  # Empty column for Valor
+        "",  # Empty column for Fecha
+        f'=SUMIF(A:A, "Ingreso", D:D)',  # Formula for Total de Ingresos
+        f'=SUMIF(A:A, "Gasto", D:D)',  # Formula for Total de Gastos
+        f'=SUMIF(A:A, "Ingreso", D:D) - SUMIF(A:A, "Gasto", D:D)',  # Formula for Total General
+    ])
+
+    # Prepare the HTTP response
+    response = HttpResponse(content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+    response["Content-Disposition"] = "attachment; filename=ingresos_y_gastos.xlsx"
+
+    # Save the workbook to the response
+    workbook.save(response)
+
+    return response

@@ -18,5 +18,6 @@ urlpatterns = [
     path("gastos/<int:pk>/eliminar/", views.expense_delete, name="expense_delete"),
     path("reportes", views.reports, name="reports"),
     path("total", views.totals_by_month_year, name="totals_by_month_year"),
+    path("excel", views.export_incomes_expenses_to_excel, name="export_excel"),
     # ex: /polls/5/
 ]
