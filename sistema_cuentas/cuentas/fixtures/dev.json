@@ -1,0 +1,518 @@
+[
+  {
+    "model": "cuentas.Expense",
+    "pk": 1,
+    "fields": {
+      "name": "Expense 1",
+      "value": 12.34,
+      "date": "2023-11-19",
+      "category": "Food",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 2,
+    "fields": {
+      "name": "Expense 2",
+      "value": 56.78,
+      "date": "2023-11-20",
+      "category": "Transportation",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 3,
+    "fields": {
+      "name": "Expense 3",
+      "value": 90.12,
+      "date": "2023-11-21",
+      "category": "Entertainment",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 4,
+    "fields": {
+      "name": "Groceries",
+      "value": 75.23,
+      "date": "2023-11-22",
+      "category": "Food",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 5,
+    "fields": {
+      "name": "Utilities",
+      "value": 120.5,
+      "date": "2023-11-23",
+      "category": "Home",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 6,
+    "fields": {
+      "name": "Dining Out",
+      "value": 35.78,
+      "date": "2023-11-24",
+      "category": "Food",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 7,
+    "fields": {
+      "name": "Clothing",
+      "value": 89.99,
+      "date": "2023-11-25",
+      "category": "Shopping",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 8,
+    "fields": {
+      "name": "Gas",
+      "value": 30.25,
+      "date": "2023-11-26",
+      "category": "Transportation",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 9,
+    "fields": {
+      "name": "Entertainment",
+      "value": 25.0,
+      "date": "2023-11-27",
+      "category": "Entertainment",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 10,
+    "fields": {
+      "name": "Phone Bill",
+      "value": 50.0,
+      "date": "2023-11-28",
+      "category": "Utilities",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 11,
+    "fields": {
+      "name": "Phone Bill",
+      "value": 50.0,
+      "date": "2023-11-28",
+      "category": "Utilities",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 12,
+    "fields": {
+      "name": "Phone Bill",
+      "value": 50.0,
+      "date": "2023-11-28",
+      "category": "Utilities",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 13,
+    "fields": {
+      "name": "Phone Bill",
+      "value": 50.0,
+      "date": "2023-11-28",
+      "category": "Utilities",
+      "created_at": "2024-11-19T10:59:42Z",
+      "updated_at": "2024-11-19T10:59:42Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 14,
+    "fields": {
+      "name": "Side Hustle",
+      "value": 300.00,
+      "date": "2023-11-29",
+      "category": "Freelance",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 15,
+    "fields": {
+      "name": "Cashback",
+      "value": 15.00,
+      "date": "2023-11-30",
+      "category": "Other",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 16,
+    "fields": {
+      "name": "Rebate",
+      "value": 20.00,
+      "date": "2023-12-01",
+      "category": "Other",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 17,
+    "fields": {
+      "name": "Commission",
+      "value": 180.00,
+      "date": "2023-12-02",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 18,
+    "fields": {
+      "name": "Bonus",
+      "value": 300.00,
+      "date": "2023-12-03",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 19,
+    "fields": {
+      "name": "Rental Income",
+      "value": 850.00,
+      "date": "2023-12-04",
+      "category": "Rental",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 20,
+    "fields": {
+      "name": "Freelance Project",
+      "value": 600.00,
+      "date": "2023-12-05",
+      "category": "Freelance",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 21,
+    "fields": {
+      "name": "Interest",
+      "value": 30.25,
+      "date": "2023-12-06",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 22,
+    "fields": {
+      "name": "Dividend",
+      "value": 120.00,
+      "date": "2023-12-07",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Expense",
+    "pk": 23,
+    "fields": {
+      "name": "Salary",
+      "value": 2600.00,
+      "date": "2023-12-08",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 1,
+    "fields": {
+      "name": "Salary",
+      "value": 2500.0,
+      "date": "2023-11-19",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:04:25Z",
+      "updated_at": "2024-11-19T11:04:25Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 2,
+    "fields": {
+      "name": "Freelance Project",
+      "value": 500.0,
+      "date": "2023-11-20",
+      "category": "Freelance",
+      "created_at": "2024-11-19T11:04:25Z",
+      "updated_at": "2024-11-19T11:04:25Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 3,
+    "fields": {
+      "name": "Rental Income",
+      "value": 800.0,
+      "date": "2023-11-21",
+      "category": "Rental",
+      "created_at": "2024-11-19T11:04:25Z",
+      "updated_at": "2024-11-19T11:04:25Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 4,
+    "fields": {
+      "name": "Interest",
+      "value": 25.5,
+      "date": "2023-11-22",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:04:25Z",
+      "updated_at": "2024-11-19T11:04:25Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 5,
+    "fields": {
+      "name": "Dividend",
+      "value": 100.0,
+      "date": "2023-11-23",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:04:25Z",
+      "updated_at": "2024-11-19T11:04:25Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 6,
+    "fields": {
+      "name": "Bonus",
+      "value": 500.0,
+      "date": "2023-11-24",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:06:54Z",
+      "updated_at": "2024-11-19T11:06:54Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 7,
+    "fields": {
+      "name": "Reimbursement",
+      "value": 120.0,
+      "date": "2023-11-25",
+      "category": "Other",
+      "created_at": "2024-11-19T11:06:54Z",
+      "updated_at": "2024-11-19T11:06:54Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 8,
+    "fields": {
+      "name": "Gift",
+      "value": 75.0,
+      "date": "2023-11-26",
+      "category": "Other",
+      "created_at": "2024-11-19T11:06:54Z",
+      "updated_at": "2024-11-19T11:06:54Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 9,
+    "fields": {
+      "name": "Refund",
+      "value": 20.0,
+      "date": "2023-11-27",
+      "category": "Other",
+      "created_at": "2024-11-19T11:06:54Z",
+      "updated_at": "2024-11-19T11:06:54Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 10,
+    "fields": {
+      "name": "Commission",
+      "value": 150.0,
+      "date": "2023-11-28",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:06:54Z",
+      "updated_at": "2024-11-19T11:06:54Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 11,
+    "fields": {
+      "name": "Side Hustle",
+      "value": 300.0,
+      "date": "2023-11-29",
+      "category": "Freelance",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 12,
+    "fields": {
+      "name": "Cashback",
+      "value": 15.0,
+      "date": "2023-11-30",
+      "category": "Other",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 13,
+    "fields": {
+      "name": "Rebate",
+      "value": 20.0,
+      "date": "2023-12-01",
+      "category": "Other",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 14,
+    "fields": {
+      "name": "Commission",
+      "value": 180.0,
+      "date": "2023-12-02",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 15,
+    "fields": {
+      "name": "Bonus",
+      "value": 300.0,
+      "date": "2023-12-03",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 16,
+    "fields": {
+      "name": "Rental Income",
+      "value": 850.0,
+      "date": "2023-12-04",
+      "category": "Rental",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 17,
+    "fields": {
+      "name": "Freelance Project",
+      "value": 600.0,
+      "date": "2023-12-05",
+      "category": "Freelance",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 18,
+    "fields": {
+      "name": "Interest",
+      "value": 30.25,
+      "date": "2023-12-06",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 19,
+    "fields": {
+      "name": "Dividend",
+      "value": 120.0,
+      "date": "2023-12-07",
+      "category": "Investment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  },
+  {
+    "model": "cuentas.Income",
+    "pk": 20,
+    "fields": {
+      "name": "Salary",
+      "value": 2600.0,
+      "date": "2023-12-08",
+      "category": "Employment",
+      "created_at": "2024-11-19T11:07:29Z",
+      "updated_at": "2024-11-19T11:07:29Z"
+    }
+  }
+]

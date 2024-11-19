@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
+from django.core.paginator import Paginator
 from cuentas.models import Income, Expense
 from .forms import IncomeForm, ExpenseForm
 
@@ -9,8 +10,11 @@ def index(request):
     return render(request, "cuentas/index.html", context)
 def incomes(request):
     incomes = Income.objects.all()
+    paginator = Paginator(incomes, 12)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     form = IncomeForm()
-    context = {"incomes": incomes, 'form': form}
+    context = {"page_obj": page_obj, 'form': form}
     return render(request, "cuentas/incomes.html", context)
 # Detail View
 def income_detail(request, pk):
@@ -50,8 +54,11 @@ def income_delete(request, pk):
 
 def expenses(request):
     expenses = Expense.objects.all()
+    paginator = Paginator(expenses, 12)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
     form = ExpenseForm()
-    context = {"expenses": expenses, 'form': form}
+    context = {"page_obj": page_obj, 'form': form}
     return render(request, "cuentas/expenses.html", context)
 
 # Create View

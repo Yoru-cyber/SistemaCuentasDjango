@@ -60,7 +60,7 @@
         </tr>
       </thead>
       <tbody class="text-center">
-        {% for expense in expenses %}
+        {% for expense in page_obj %}
         <tr id="{{ expense.id }}">
           <th>{{ expense.id }}</th>
           <td>{{ expense.name }}</td>
@@ -98,6 +98,23 @@
       </tbody>
     </table>
   </div>
+  <div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">1</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">{{page_obj.paginator.num_pages}}</a>
+        {% endif %}
+    </span>
+</div>
 </div>
 
 <a href="{% url 'cuentas:expense_create' %}" class="btn btn-outline btn-success fixed w-fit bottom-0 right-0 mb-10 sm:mb-5 m-2 p-2">Nuevo Gasto
