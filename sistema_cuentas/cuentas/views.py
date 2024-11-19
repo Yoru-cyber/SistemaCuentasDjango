@@ -35,7 +35,7 @@ def income_update(request, pk):
         form = IncomeForm(request.POST, instance=income)
         if form.is_valid():
             form.save()
-            return redirect(reverse('index'))
+            return redirect(reverse('cuentas:incomes'))
     else:
         form = IncomeForm(instance=income)
     return render(request, 'cuentas/income_form.html', {'form': form})

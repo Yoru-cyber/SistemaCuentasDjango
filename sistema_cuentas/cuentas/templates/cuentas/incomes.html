@@ -58,7 +58,7 @@
           <th>Acciones</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="text-center">
         {% for income in incomes %}
         <tr id="{{ income.id }}">
           <th>{{ income.id }}</th>
@@ -70,7 +70,7 @@
               <li>
                 <a
                   class="btn btn-outline btn-warning"
-                  href=""
+                  href="{%url 'cuentas:income_update' income.id %}"
                 >
                   {% heroicon_outline "pencil" %}
                 </a>
