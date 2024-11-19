@@ -23,3 +23,22 @@ class ExpenseForm(forms.ModelForm):
     class Meta:
         model = Expense
         fields = ["name", "value", "date", "category"]
+
+
+class ReportForm(forms.Form):
+    year = forms.IntegerField(
+        label="Year",
+        min_value=1,
+        max_value=9999,
+        widget=forms.NumberInput(
+            attrs={"class": "form-control w-full", "placeholder": "Enter year"}
+        ),
+    )
+    month = forms.IntegerField(
+        label="Month",
+        min_value=1,
+        max_value=12,
+        widget=forms.NumberInput(
+            attrs={"class": "form-control w-full", "placeholder": "Enter month (1-12)"}
+        ),
+    )

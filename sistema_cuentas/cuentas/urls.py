@@ -16,5 +16,7 @@ urlpatterns = [
     path("gastos/crear/", views.expense_create, name="expense_create"),
     path("gastos/<int:pk>/editar/", views.expense_update, name="expense_update"),
     path("gastos/<int:pk>/eliminar/", views.expense_delete, name="expense_delete"),
+    path("reportes", views.reports, name="reports"),
+    path("total", views.totals_by_month_year, name="totals_by_month_year"),
     # ex: /polls/5/
 ]

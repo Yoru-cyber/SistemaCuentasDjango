@@ -1,0 +1,17 @@
+{%extends "cuentas/base.html"%} {%block content%}
+<div class="w-screen h-screen flex flex-col items-center">
+    
+        <form method="post" class="flex flex-col items-center space-y-2.5 bg-white border-solid border-2 w-2/12 border-zinc-200 shadow-2xl text-zinc-700 rounded-lg p-5">
+        {% csrf_token %}
+    {% csrf_token %} {% for field in form %}
+    <div class="form-group w-full">
+      <label class="input input-bordered flex items-center gap-2 bg-white">
+        {{ field.label_tag }} {{ field }}</label
+      >
+      <div class="text-danger">{{ field.errors }}</div>
+    </div>
+    {% endfor %}
+        <button type="submit" class="btn btn-primary">Generar PDF</button>
+    </form>
+</div>
+{%endblock%}
