@@ -1,4 +1,14 @@
-{%extends "cuentas/base.html"%} 
-{%block content%}
-<h1>This is content from index</h1>
+{%extends "cuentas/base.html"%} {%load heroicons%} {%block content%}
+<div class="w-screen h-screen flex flex-row items-center justify-center">
+  <a
+    class="inline-flex justify-center text-lg font-medium items-center tracking-tighter btn btn-ghost"
+    href="{% url 'cuentas:income_create' %}"
+    >{% heroicon_outline "currency-dollar" %}Nueva Entrada</a
+  >
+  <a
+    class="inline-flex justify-center text-lg font-medium items-center tracking-tighter btn btn-ghost"
+    href="{% url 'cuentas:expense_create' %}"
+    >{% heroicon_outline "shopping-bag" %}Nuevo Gasto</a
+  >
+</div>
 {%endblock%}
