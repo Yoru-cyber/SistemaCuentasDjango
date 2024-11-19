@@ -13,12 +13,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    {% load heroicons %}
-    <nav class="text-blue-700">
-      <a href="{% url 'cuentas:index' %}">Inicio</a
-      ><a href="{% url 'cuentas:incomes' %}">Entradas</a>
-    </nav>
-    {%block content%} {%endblock%}
+    {% load heroicons %} {% include 'cuentas/navbar.html' %} {%block content%}
+    {%endblock%}
   </body>
   <style>
     body {

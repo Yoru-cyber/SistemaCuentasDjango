@@ -64,7 +64,7 @@
           <th>{{ income.id }}</th>
           <td>{{ income.name }}</td>
           <td>{{ income.value }}</td>
-          <td>{{ income.date|date:"%d %B %Y" }}</td>
+          <td>{{ income.date|date:"SHORT_DATE_FORMAT" }}</td>
           <th>
             <ul class="flex flex-row space-x-5 justify-center">
               <li>
@@ -72,12 +72,12 @@
                   class="btn btn-outline btn-warning"
                   href=""
                 >
-                  <i class="fas fa-pencil-square w-6 h-6"></i>
+                  {% heroicon_outline "pencil" %}
                 </a>
               </li>
               <li>
                 <form
-                  action=""
+                  action="{%url 'cuentas:income_delete' income.id %}"
                   method="POST"
                 >
                   {% csrf_token %}
@@ -85,7 +85,7 @@
                     class="btn btn-outline btn-error"
                     onclick="return confirm('¿Está seguro de borrar este elemento?\nEsta acción es irreversible.')"
                   >
-                    <i class="fas fa-trash w-6 h-6"></i>
+                    {% heroicon_outline "trash" %}
                   </button>
                 </form>
               </li>
@@ -97,7 +97,7 @@
     </table>
   </div>
 </div>
-{% endblock %}
 
-<!-- <a href="{% url 'income:new' %}" class="btn btn-outline btn-success fixed w-fit bottom-0 right-0 mb-10 sm:mb-5 m-2 p-2">Nueva Entrada
-  <i class="fas fa-file-plus w-6 h-6"></i>  </a> -->
+<a href="{% url 'cuentas:income_create' %}" class="btn btn-outline btn-success fixed w-fit bottom-0 right-0 mb-10 sm:mb-5 m-2 p-2">Nueva Entrada
+  {% heroicon_outline "plus" %}
+{% endblock %}

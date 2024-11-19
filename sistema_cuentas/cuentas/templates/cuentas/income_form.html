@@ -1,0 +1,35 @@
+{%extends "cuentas/base.html"%} {%load heroicons%} {%block content%}
+<div class="flex flex-col items-center w-screen h-screen bg-white">
+  <h1>{% if form.instance.pk %}Edit{% else %}Crear {% endif %} Entrada</h1>
+  <form
+    method="post"
+    class="flex flex-col items-center space-y-2.5 bg-white border-solid border-2 lg:w-fit w-screen border-zinc-200 shadow-2xl text-zinc-700 rounded-lg p-5"
+  >
+    {% csrf_token %} {% for field in form %}
+    <div class="form-group">
+      <label class="input input-bordered flex items-center gap-2 bg-white">
+        {{ field.label_tag }} {{ field }}</label
+      >
+      <div class="text-danger">{{ field.errors }}</div>
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-outline btn-success">
+      Guardar
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 3v18h18V6l-3-3H3ZM7.5 3v6h9V3M6 21v-9h12v9M14.25 5.25v1.5"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+{%endblock%}
